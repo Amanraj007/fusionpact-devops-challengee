@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fusionpact-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fusionpact-frontend
+  template:
+    metadata:
+      labels:
+        app: fusionpact-frontend
+    spec:
+      containers:
+        - name: fusionpact-frontend
+          image: aman65f/fusionpact-frontend:latest
+          ports:
+            - containerPort: 80
+
