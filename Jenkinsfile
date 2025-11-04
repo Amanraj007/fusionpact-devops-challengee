@@ -46,7 +46,7 @@ pipeline {
             steps {
                 echo '🔹 Deploying to Kubernetes...'
                 script {
-                    writeFile file: 'config', text: "${KUBE_CONFIG}"
+                    writeFile file: 'config', text: """${KUBE_CONFIG.replaceAll(\\\\n','\n')}"""
                     sh '''
                         mkdir -p ~/.kube
                         cp config ~/.kube/config
