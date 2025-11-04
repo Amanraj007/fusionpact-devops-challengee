@@ -1,0 +1,29 @@
+# === Jenkins files to ignore ===
+Jenkins-pipelines/jenkins-docker/jenkins_home/
+*.log
+*.tmp
+
+# === Docker ===
+*.env
+.dockerignore
+
+# === Node.js ===
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+build/
+
+# === Python (if backend uses Python) ===
+__pycache__/
+*.pyc
+
+# === Kubernetes ===
+.kube/
+kubeconfig
+
+# === System ===
+.DS_Store
+*.swp
+*.swo
+.env
